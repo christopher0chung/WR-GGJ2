@@ -21,7 +21,7 @@ public class PlayerCollisionDetector : MonoBehaviour {
 	void OnTriggerEnter (Collider col) {
 		if (col.tag == "Hazard") {
 			print ("Lost Data");
-			textController.AddScore (-10);
+			textController.AddScore (10);
 		}
 	}
 
