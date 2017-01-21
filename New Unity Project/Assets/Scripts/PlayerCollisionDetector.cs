@@ -14,7 +14,6 @@ public class PlayerCollisionDetector : MonoBehaviour {
 		if (textController == null) {
 			Debug.Log ("Cannot find 'textController' script");
 		}
-
 	}
 
 
@@ -22,6 +21,8 @@ public class PlayerCollisionDetector : MonoBehaviour {
 		if (col.tag == "Hazard") {
 			print ("Lost Data");
 			textController.AddScore (10);
+            Instantiate(Resources.Load("FirewallExplosion"), col.transform.position, Quaternion.identity);
+            Destroy(col.gameObject);
 		}
 	}
 
