@@ -29,7 +29,10 @@ public class TextController : MonoBehaviour {
 	}
 
 	void UpdateScore(){  //updates score text.
-		scoreText.text = "Data Stolen: " + score;
+		if (score < 0) {
+			score = 0;
+		}
+		scoreText.text = "Data Stolen: " + score + "%";
 	}
 
 	public void UpdateLevel(int level) {  //updates level text
