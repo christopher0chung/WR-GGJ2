@@ -27,6 +27,7 @@ public class PlayerCollisionDetector : MonoBehaviour {
 		if (col.tag == "Pickup") {
 			print ("Gained Data");
 			textController.AddScore (10);
+			Instantiate(Resources.Load("FirewallExplosion"), col.transform.position, Quaternion.identity);
 			Destroy (col.gameObject);
 		}
 	}
