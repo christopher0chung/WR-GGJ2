@@ -4,8 +4,25 @@ using UnityEngine;
 
 public class PlayerCollisionDetector : MonoBehaviour {
 
+	private TextController textController;
+
+	void Start(){
+		GameObject textControllerObject = GameObject.FindWithTag ("TextController");
+		if (textControllerObject != null) {
+			textController = textControllerObject.GetComponent<TextController>();
+		}
+		if (textController == null) {
+			Debug.Log ("Cannot find 'textController' script");
+		}
+
+	}
+
+
 	void OnTriggerEnter (Collider col) {
-		Debug.Log ("I've been hit!");
+		if (col.tag == "Hazard") {
+			print ("Lost Data");
+			textController.AddScore (-10);
+		}
 	}
 
 }

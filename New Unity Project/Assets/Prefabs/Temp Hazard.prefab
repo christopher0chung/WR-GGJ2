@@ -41,10 +41,9 @@ GameObject:
   - component: {fileID: 23376105843785872}
   - component: {fileID: 114176350552562412}
   - component: {fileID: 54434690316556380}
-  - component: {fileID: 114980739482501190}
   m_Layer: 0
   m_Name: Temp Hazard
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
