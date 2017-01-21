@@ -20,7 +20,7 @@ public class TextController : MonoBehaviour {
 		level = 1;
 
 		UpdateScore ();
-		UpdateLevel ();
+		UpdateLevel (level);
 	}
 	
 	public void AddScore (int newScoreValue){  //adds new value to score and updates it.
