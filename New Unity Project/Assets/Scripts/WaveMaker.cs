@@ -98,8 +98,8 @@ public class WaveMaker : MonoBehaviour {
         for (int i = 0; i < 100; i++)
         {
             valuesMain[i] = new Vector3(-100 + (i * 2), points[i], 0);
-            valuesLeft[i] = new Vector3(-10 - (i * .9f), pointsLS[i] / 5 - 40, 0);
-            valuesRight[i] = new Vector3(10 + (i * .9f), pointsRS[i] / 5 - 40, 0);
+            valuesLeft[i] = new Vector3(-20 - (i * .8f), pointsLS[i] / 7 - 48, 0);
+            valuesRight[i] = new Vector3(20 + (i * .8f), pointsRS[i] / 7 - 48, 0);
         }
         graphicMain.MakeSpline(valuesMain);
         graphicLeft.MakeSpline(valuesLeft);
