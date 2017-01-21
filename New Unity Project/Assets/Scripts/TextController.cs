@@ -32,7 +32,7 @@ public class TextController : MonoBehaviour {
 		if (score < 0) {
 			score = 0;
 		}
-		scoreText.text = "Data Stolen: " + score + "%";
+		scoreText.text = "Data Stolen:\n" + score + "%";
 	}
 
 	public void UpdateLevel(int level) {  //updates level text
