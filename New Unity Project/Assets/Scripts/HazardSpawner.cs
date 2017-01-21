@@ -8,7 +8,14 @@ public class HazardSpawner : MonoBehaviour {
 	public float hazardDelayMax;
 	private int index = 0;
 
-	public GameObject[] hazards;
+	private GameObject[] hazards;
+
+	public GameObject[] LevelOne;
+
+	void Start() {
+		hazards = LevelOne;
+	}
+
 
 	// Update is called once per frame
 	void Update () {
