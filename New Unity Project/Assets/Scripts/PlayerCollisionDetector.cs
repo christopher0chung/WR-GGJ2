@@ -20,9 +20,14 @@ public class PlayerCollisionDetector : MonoBehaviour {
 	void OnTriggerEnter (Collider col) {
 		if (col.tag == "Hazard") {
 			print ("Lost Data");
-			textController.AddScore (10);
+			textController.AddScore (-10);
             Instantiate(Resources.Load("FirewallExplosion"), col.transform.position, Quaternion.identity);
             Destroy(col.gameObject);
+		}
+		if (col.tag == "Pickup") {
+			print ("Gained Data");
+			textController.AddScore (10);
+			Destroy (col.gameObject);
 		}
 	}
 
