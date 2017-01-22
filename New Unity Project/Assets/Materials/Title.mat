@@ -93,13 +93,13 @@ Material:
       second: 0.01
     - first:
         name: _DistortionSpreader
-      second: 2
+      second: 10
     - first:
         name: _DstBlend
       second: 0
     - first:
         name: _FlickSpeed
-      second: 10
+      second: 2
     - first:
         name: _GlossMapScale
       second: 1
@@ -142,7 +142,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0.10953346, g: 0.39705884, b: 0.09926471, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}

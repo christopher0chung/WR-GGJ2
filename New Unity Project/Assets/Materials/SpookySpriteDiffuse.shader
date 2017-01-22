@@ -83,7 +83,7 @@ Shader "Custom/SpookySpriteDiffuse" {
 				tex2D(_NoiseTex, float2(0, IN.worldPosition.x / _DistortionSpreader + _Time[1])).r);
 			fixed4 c = SampleSpriteTexture(IN.uv_MainTex + offset * _DistortionDamper) * IN.color;
             _Color = _Color -  sin(frac(sin(_Time[1] * _FlickSpeed)));
-			o.Albedo = (c.rgb  + _Color * 5) * c.a;
+			o.Albedo = (c.rgb  + _Color ) * c.a;
 			o.Alpha = c.a;
 		}
 		ENDCG
