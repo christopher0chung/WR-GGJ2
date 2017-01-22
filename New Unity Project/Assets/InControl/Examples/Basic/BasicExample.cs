@@ -17,7 +17,7 @@ namespace BasicExample
 
 		void Update()
 		{
-            if (mySceneNum == 0)
+            if (mySceneNum < 4 )
             {
                 JoinScreen();
             }
@@ -45,7 +45,7 @@ namespace BasicExample
 
             if (inputDevice.CommandIsPressed)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(4);
             }
         }
 
@@ -58,12 +58,24 @@ namespace BasicExample
             myWM.LSLR = inputDevice.LeftStickX;
             myWM.RSUD = inputDevice.RightStickY;
             myWM.RSLR = inputDevice.RightStickX;
+
+            if (inputDevice.CommandIsPressed)
+            {
+                if (GameObject.Find("MoveOn")!=null)
+                {
+                    GameObject.Find("MoveOn").GetComponent<MoveOn>().MoveOnToNext();
+                }
+                if (GameObject.Find("Restart") != null)
+                {
+                    GameObject.Find("Restart").GetComponent<Restart>().RestartIt();
+                }
+            }
         }
 
         void NewScene (Scene scene, LoadSceneMode mode)
         {
             mySceneNum = scene.buildIndex;
-            if (mySceneNum != 0)
+            if (mySceneNum > 0)
             {
                 myWM = GameObject.Find("Waveform").GetComponent<WaveMaker>();
                 GetComponent<MeshRenderer>().enabled = false;
