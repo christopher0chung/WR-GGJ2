@@ -555,9 +555,9 @@ MonoBehaviour:
   valuesRight: []
   segmentNum: 200
   lineWidth: 15
-  mainLineCol: {r: 0.8, g: 0.15294118, b: 0.37254903, a: 0.60784316}
-  leftLineCol: {r: 0.8, g: 0.15294118, b: 0.37254903, a: 0}
-  rightLineCol: {r: 0.8, g: 0.15294118, b: 0.37254903, a: 0}
+  mainLineCol: {r: 0.8, g: 0.15294118, b: 0.37254903, a: 1}
+  leftLineCol: {r: 0.8, g: 0.15294118, b: 0.37254903, a: 1}
+  rightLineCol: {r: 0.8, g: 0.15294118, b: 0.37254903, a: 1}
   pointNum: 100
 --- !u!4 &1247536203
 Transform:

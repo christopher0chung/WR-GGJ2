@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,10 +22,10 @@ public class SoundManager : MonoBehaviour {
 	public float deadThemeVolume;
 
 
-	//SFX TRACKS
-	public AudioClip mainTheme;
-	public AudioClip titleTheme;
-	public AudioClip deadTheme;
+	////SFX TRACKS
+	//public AudioClip mainTheme;
+	//public AudioClip titleTheme;
+	//public AudioClip deadTheme;
 
 	void Awake() {
 		SceneManager.sceneLoaded += NewScene;
