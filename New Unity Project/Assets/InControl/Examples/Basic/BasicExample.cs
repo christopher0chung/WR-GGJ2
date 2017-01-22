@@ -43,7 +43,7 @@ namespace BasicExample
             // Blend the two colors together to color the object.
             GetComponent<Renderer>().material.color = Color.Lerp(color1, color2, 0.5f);
 
-            if (inputDevice.CommandIsPressed)
+			if (inputDevice.CommandIsPressed || Input.anyKeyDown)
             {
                 SceneManager.LoadScene(4);
             }
