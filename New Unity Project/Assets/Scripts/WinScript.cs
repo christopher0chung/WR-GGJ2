@@ -17,20 +17,20 @@ public class WinScript : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        if (timeIsUp == true)
-        {
-            if (score > 85)
-            {
+        if (Input.GetKeyDown(KeyCode.X)) {
+            LevelLoader loader = GetComponent<LevelLoader>();
+            loader.StartCoroutine(loader.Win());
+        }
+
+        if (timeIsUp == true) {
+            if (score > 85) {
                 //go to next stage
                 //unload previous stage
-            }
-            else
-            {
+            } else {
                 //go to try again screen
             }
         }
-        if (playerDied == true)
-        {
+        if (playerDied == true) {
             //go to try again screen
 
         }

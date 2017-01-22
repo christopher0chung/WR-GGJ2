@@ -1,40 +1,48 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour {
-
+    public static LevelLoader instance;
     private int activeLevel;
     private bool win;
     private bool lose;
 
-	void Start () {
+    void Awake() {
+        DontDestroyOnLoad(gameObject);
+        if (instance == null) {
+            instance = this;
+        } else if (instance != this) {
+            Destroy(gameObject);
+        }
+    }
+
+    void Start() {
         activeLevel = 5;
         loadActiveLevel();
-	}
+    }
 
-    public void setActiveLevel(int levelInc)
-    {
+    public void setActiveLevel(int levelInc) {
         activeLevel += levelInc;
         if (activeLevel < 5)
             activeLevel = 5;
     }
 
-    void loadActiveLevel()
-    {
+    void loadActiveLevel() {
         SceneManager.LoadScene(activeLevel, LoadSceneMode.Additive);
         win = lose = false;
     }
 
-    void Win ()
-    {
+    public IEnumerator Win() {
         win = true;
         SceneManager.UnloadSceneAsync(activeLevel);
         SceneManager.LoadScene(2);
+        yield return new WaitForSeconds(4);
+        setActiveLevel(1);
+        loadActiveLevel();
     }
 
-    void Lose()
-    {
+    public void Lose() {
         lose = true;
         SceneManager.UnloadSceneAsync(activeLevel);
         SceneManager.LoadScene(3);

@@ -96,7 +96,7 @@ Material:
       second: 1
     - first:
         name: _Intensity
-      second: 0.5366874
+      second: -0.11482179
     - first:
         name: _Metallic
       second: 0
