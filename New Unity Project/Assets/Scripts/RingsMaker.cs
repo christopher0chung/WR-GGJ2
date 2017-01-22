@@ -53,4 +53,10 @@ public class RingsMaker : MonoBehaviour {
         }
         ringMat.color = Color.white;
     }
+
+    public void unSubscribe()
+    {
+        PlayerCollisionDetector.onPlayerHit -= PlayerHit;
+        PlayerCollisionDetector.onPlayerCollect -= PlayerCollect;
+    }
 }

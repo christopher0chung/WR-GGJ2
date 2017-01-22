@@ -10,22 +10,23 @@ namespace BasicExample
         public WaveMaker myWM;
 		public GameObject souMan;
 
+        public delegate void runningUpdate();
+        public runningUpdate theUpdate;
+
         void Awake()
         {
             SceneManager.sceneLoaded += NewScene;
             DontDestroyOnLoad(this.gameObject);
         }
 
+        void Start ()
+        {
+            theUpdate = JoinScreen;
+        }
+
 		void Update()
 		{
-            if (mySceneNum < 4 )
-            {
-                JoinScreen();
-            }
-            else
-            {
-                GameScreen();
-            }
+            theUpdate();
 		}
 
         void JoinScreen()
@@ -46,8 +47,13 @@ namespace BasicExample
 
 			if (inputDevice.CommandIsPressed || Input.anyKeyDown)
             {
+                theUpdate = GameScreen;
 				this.GetComponent<AudioSource> ().Play ();
 				souMan.GetComponent<AudioSource> ().Stop ();
+                if (GameObject.Find("RingMaker") != null)
+                {
+                    GameObject.Find("RingMaker").GetComponent<RingsMaker>().unSubscribe();
+                }
 				Invoke("StartGame", 2.0f);
             }
         }
