@@ -43,14 +43,16 @@ public class WaveMaker : MonoBehaviour {
     public Color leftLineCol;
     public Color rightLineCol;
 
+    public int pointNum;
+
     // Use this for initialization
     void Start () {
-        points = new float[100];
-        valuesMain = new Vector3[100];
-        valuesLeft = new Vector3[100];
-        valuesRight = new Vector3[100];
+        points = new float[pointNum];
+        valuesMain = new Vector3[pointNum];
+        valuesLeft = new Vector3[pointNum];
+        valuesRight = new Vector3[pointNum];
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < pointNum; i++)
         {
             pointsLS.Add(0);
             pointsRS.Add(0);
@@ -91,17 +93,17 @@ public class WaveMaker : MonoBehaviour {
 
     void CombinePoints()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < pointNum; i++)
         {
-            points[i] = (pointsLS[99 - i] + pointsRS[i]);
+            points[i] = (pointsLS[pointNum - 1 - i] + pointsRS[i]);
         }
     }
 
     void DrawLine()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < pointNum; i++)
         {
-            valuesMain[i] = new Vector3(-100 + (i * 2), points[i], 0);
+            valuesMain[i] = new Vector3(-pointNum + (i * 2), points[i], 0);
             valuesLeft[i] = new Vector3(-20 - (i * .8f), pointsLS[i] / 7 - 48, 0);
             valuesRight[i] = new Vector3(20 + (i * .8f), pointsRS[i] / 7 - 48, 0);
         }
