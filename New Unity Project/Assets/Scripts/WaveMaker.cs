@@ -50,6 +50,9 @@ public class WaveMaker : MonoBehaviour {
     float sawtoothDuration;
     float triangleDuration;
 
+    bool leftChange;
+    bool rightChange;
+
     // Use this for initialization
     void Start() {
         points = new float[pointNum];
@@ -88,18 +91,24 @@ public class WaveMaker : MonoBehaviour {
         float r = Mathf.Sin(periodRS);
 
         if (squareWaveDuration > 0) {
-            l = Mathf.Sin(periodLS) < 0 ? -1 : 1;
-            r = Mathf.Sin(periodLS) < 0 ? -1 : 1;
+            if (leftChange)
+                l = Mathf.Sin(periodLS) < 0 ? -1 : 1;
+            if (rightChange)
+                r = Mathf.Sin(periodLS) < 0 ? -1 : 1;
         }
 
         if (sawtoothDuration > 0) {
-            l = 1 - ((periodLS - Mathf.Floor(periodLS)) - 0.5f) * 2;
-            r = 1 - ((periodRS - Mathf.Floor(periodRS)) - 0.5f) * 2;
+            if (leftChange)
+                l = 1 - ((periodLS - Mathf.Floor(periodLS)) - 0.5f) * 2;
+            if (rightChange)
+                r = 1 - ((periodRS - Mathf.Floor(periodRS)) - 0.5f) * 2;
         }
 
         if (triangleDuration > 0) {
-            l = 2 / Mathf.PI * (float)System.Math.Asin(l);
-            r = 2 / Mathf.PI * (float)System.Math.Asin(r);
+            if (leftChange)
+                l = 2 / Mathf.PI * (float)System.Math.Asin(l);
+            if (rightChange)
+                r = 2 / Mathf.PI * (float)System.Math.Asin(r);
         }
 
         float nextPointLS = ampModLS * l;
@@ -130,25 +139,43 @@ public class WaveMaker : MonoBehaviour {
         graphicMain.color = mainLineCol;
         graphicLeft.color = leftLineCol;
         graphicRight.color = rightLineCol;
-
+        CanvasSetUp();
         graphicMain.Draw();
         graphicLeft.Draw();
         graphicRight.Draw();
     }
 
-    public void SquareWave(float duration) {
+    void CanvasSetUp() {
+        graphicLeft.SetCanvas(GameObject.Find("LineCanvas"));
+        graphicRight.SetCanvas(GameObject.Find("LineCanvas"));
+        graphicMain.SetCanvas(GameObject.Find("LineCanvas"));
+        graphicLeft.rectTransform.anchoredPosition3D = Vector3.zero;
+        graphicLeft.rectTransform.localScale = Vector3.one;
+        graphicRight.rectTransform.anchoredPosition3D = Vector3.zero;
+        graphicRight.rectTransform.localScale = Vector3.one;
+        graphicMain.rectTransform.anchoredPosition3D = Vector3.zero;
+        graphicMain.rectTransform.localScale = Vector3.one;
+    }
+
+    public void SquareWave(float duration, bool left, bool right) {
         squareWaveDuration = duration;
-        DOTween.To(() => squareWaveDuration, (x) => squareWaveDuration = x, 0, duration);
+        leftChange = left;
+        rightChange = right;
+        DOTween.To(() => squareWaveDuration, (x) => squareWaveDuration = x, 0, duration).OnComplete(() => { leftChange = false; rightChange = false; });
     }
 
-    public void SawtoothWave(float duration) {
+    public void SawtoothWave(float duration, bool left, bool right) {
         sawtoothDuration = duration;
-        DOTween.To(() => sawtoothDuration, (x) => sawtoothDuration = x, 0, duration);
+        leftChange = left;
+        rightChange = right;
+        DOTween.To(() => sawtoothDuration, (x) => sawtoothDuration = x, 0, duration).OnComplete(() => { leftChange = false; rightChange = false; });
     }
 
-    public void TriangleWave(float duration) {
+    public void TriangleWave(float duration, bool left, bool right) {
         triangleDuration = duration;
-        DOTween.To(() => triangleDuration, (x) => triangleDuration = x, 0, duration);
+        leftChange = left;
+        rightChange = right;
+        DOTween.To(() => triangleDuration, (x) => triangleDuration = x, 0, duration).OnComplete(() => { leftChange = false; rightChange = false; });
     }
 
     public void InitLine() {
