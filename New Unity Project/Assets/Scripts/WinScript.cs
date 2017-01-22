@@ -8,29 +8,21 @@ public class WinScript : MonoBehaviour {
     public bool timeIsUp = false;
     public bool playerDied = false;
     public int score = 0;
-
+    LevelLoader loader;
     // Use this for initialization
     void Start() {
-
+        loader = GetComponent<LevelLoader>();
     }
 
     // Update is called once per frame
     void Update() {
 
         if (Input.GetKeyDown(KeyCode.X)) {
-            LevelLoader loader = GetComponent<LevelLoader>();
-            loader.StartCoroutine(loader.Win());
         }
 
-        if (timeIsUp == true) {
-            if (score > 85) {
-                //go to next stage
-                //unload previous stage
-            } else {
-                //go to try again screen
-            }
-        }
-        if (playerDied == true) {
+        if (score > 0) {
+
+        } else {
             //go to try again screen
 
         }
