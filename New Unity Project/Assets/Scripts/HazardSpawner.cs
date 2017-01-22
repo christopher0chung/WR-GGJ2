@@ -28,6 +28,9 @@ public class HazardSpawner : MonoBehaviour {
 		if(levelChoice == 3) {
 			hazards = LevelOneC;
 		}
+		if(levelChoice == 4) {
+			hazards = LevelTwo;
+		}
 	}
 
 
