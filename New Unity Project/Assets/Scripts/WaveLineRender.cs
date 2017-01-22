@@ -13,9 +13,9 @@ public class WaveLineRender : MonoBehaviour {
         line = GetComponent<LineRenderer>();
         leftLine = transform.FindChild("leftLine").GetComponent<LineRenderer>();
         rightLine = transform.FindChild("rightLine").GetComponent<LineRenderer>();
-        line.numPositions = 100;
-        leftLine.numPositions = 100;
-        rightLine.numPositions = 100;
+        line.numPositions = wave.pointNum;
+        leftLine.numPositions = wave.pointNum;
+        rightLine.numPositions = wave.pointNum;
     }
 
     // Update is called once per frame

@@ -229,13 +229,13 @@ LineRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 221922256}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_MotionVectors: 0
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 7c84453509bafd74c8630b2df11f912f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -274,10 +274,10 @@ LineRenderer:
     colorGradient:
       key0:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4294343423
       key1:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4294590207
       key2:
         serializedVersion: 2
         rgba: 0
@@ -415,10 +415,10 @@ LineRenderer:
     colorGradient:
       key0:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4279959320
       key1:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4283236096
       key2:
         serializedVersion: 2
         rgba: 0
@@ -704,13 +704,13 @@ LineRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 703783418}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_MotionVectors: 0
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 7c84453509bafd74c8630b2df11f912f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -749,10 +749,10 @@ LineRenderer:
     colorGradient:
       key0:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4294929773
       key1:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4294907956
       key2:
         serializedVersion: 2
         rgba: 0
@@ -840,11 +840,12 @@ MonoBehaviour:
   valuesMain: []
   valuesLeft: []
   valuesRight: []
-  segmentNum: 200
+  segmentNum: 100
   lineWidth: 2
   mainLineCol: {r: 0.04411763, g: 1, b: 0.1693713, a: 1}
   leftLineCol: {r: 0.9882353, g: 0.27058825, b: 1, a: 1}
   rightLineCol: {r: 0.4, g: 0.2509804, b: 1, a: 1}
+  pointNum: 100
 --- !u!4 &707580088
 Transform:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class DudeController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        
+
         angularAcc = transform.rotation.z * accSpeed;
         resisForce += (head.localRotation.z) * resist;
         resisForce = Mathf.Lerp(resisForce, 0, 0.05f);
@@ -30,8 +30,8 @@ public class DudeController : MonoBehaviour {
         head.localRotation = Quaternion.Euler(0, 0, angularVel + transform.rotation.z * 0.2f);
         //if (angularVel > 30) angularVel = 30;
         //else if (angularVel < -30) angularVel = -30;
-        transform.position = Vector3.Lerp(transform.position, wave.valuesMain[25], 0.5f) + Vector3.up * 2;
-        transform.right = (wave.valuesMain[26] - wave.valuesMain[24]).normalized;
+        transform.position = Vector3.Lerp(transform.position, wave.valuesMain[Mathf.FloorToInt(wave.pointNum / 4)], 0.5f) + Vector3.up * 2;
+        transform.right = (wave.valuesMain[Mathf.FloorToInt(wave.pointNum / 4) + 1] - wave.valuesMain[Mathf.FloorToInt(wave.pointNum / 4) - 1]).normalized;
     }
 
 
