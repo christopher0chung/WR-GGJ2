@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33139326392358538}
   - component: {fileID: 65894918317753408}
   - component: {fileID: 23593282670564460}
-  - component: {fileID: 114459281118102804}
   - component: {fileID: 54164804145478530}
   m_Layer: 0
   m_Name: Temp Hazard (1)
@@ -73,6 +72,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4735708496240186}
+  - component: {fileID: 114839243959580986}
   m_Layer: 0
   m_Name: P2-H2--
   m_TagString: Untagged
@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 33738436921948130}
   - component: {fileID: 65160259546775056}
   - component: {fileID: 23206472898685990}
-  - component: {fileID: 114736005448198176}
   - component: {fileID: 54263846451229278}
   m_Layer: 0
   m_Name: Pickup
@@ -111,7 +110,6 @@ GameObject:
   - component: {fileID: 33358856590504254}
   - component: {fileID: 65712611280477642}
   - component: {fileID: 23552299732465902}
-  - component: {fileID: 114708145996476290}
   - component: {fileID: 54101183025205254}
   m_Layer: 0
   m_Name: Pickup (1)
@@ -131,7 +129,6 @@ GameObject:
   - component: {fileID: 33960139435555708}
   - component: {fileID: 65499924505060342}
   - component: {fileID: 23526087972999502}
-  - component: {fileID: 114784217489034412}
   - component: {fileID: 54174590964621268}
   m_Layer: 0
   m_Name: Temp Hazard
@@ -497,54 +494,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114459281118102804
+--- !u!114 &114839243959580986
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1323078226510226}
+  m_GameObject: {fileID: 1442913589941464}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
---- !u!114 &114708145996476290
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1732162189113074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
---- !u!114 &114736005448198176
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1500705071343746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
---- !u!114 &114784217489034412
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1745003443820966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1
 --- !u!198 &198764167498614044
 ParticleSystem:
   m_ObjectHideFlags: 1

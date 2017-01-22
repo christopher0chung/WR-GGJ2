@@ -7,6 +7,7 @@ public class HazardSpawner : MonoBehaviour {
 	public float hazardDelayMin;
 	public float hazardDelayMax;
 	private int index = 0;
+	public float spawnSpeed;
 
 	private GameObject[] hazards;
 
@@ -38,7 +39,9 @@ public class HazardSpawner : MonoBehaviour {
 
 	void SpawnHazard() {
 		if (index < hazards.Length) {
+			hazards [index].GetComponent<SpawnMover> ().speed = spawnSpeed;
 			Instantiate (hazards [index], transform.position, Quaternion.identity);
+
 		}
 	}
 

@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33517900513053872}
   - component: {fileID: 65070365025851936}
   - component: {fileID: 23205585405866730}
-  - component: {fileID: 114336927061936942}
   - component: {fileID: 54335550098159222}
   m_Layer: 0
   m_Name: Temp Hazard
@@ -42,7 +41,6 @@ GameObject:
   - component: {fileID: 33229048020938132}
   - component: {fileID: 65999794376070232}
   - component: {fileID: 23386653401675422}
-  - component: {fileID: 114633120265003176}
   - component: {fileID: 54295649565126008}
   m_Layer: 0
   m_Name: Pickup
@@ -76,6 +74,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4763758782577236}
+  - component: {fileID: 114114015962916872}
   m_Layer: 0
   m_Name: --HP-
   m_TagString: Untagged
@@ -268,24 +267,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114336927061936942
+--- !u!114 &114114015962916872
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1053283373883456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
---- !u!114 &114633120265003176
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1062443962156170}
+  m_GameObject: {fileID: 1670926145606072}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
