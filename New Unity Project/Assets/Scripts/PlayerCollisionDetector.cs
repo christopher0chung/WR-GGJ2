@@ -9,6 +9,8 @@ public class PlayerCollisionDetector : MonoBehaviour {
     public delegate void PlayerHit();
     public static event PlayerHit onPlayerHit;
 
+	public float powerUpDuration = 10;
+
 	WaveMaker wave;
 
     public void PlayerHitEvent()
@@ -55,16 +57,22 @@ public class PlayerCollisionDetector : MonoBehaviour {
 		}
 
 		if (col.tag == "PUStepWaveL") {
-			wave.SquareWave (10,true,false);
+			wave.SquareWave (powerUpDuration,true,false);
 		}
 		if (col.tag == "PUStepWaveR") {
-			wave.SquareWave (10,true,false);
+			wave.SquareWave (powerUpDuration,false,true);
 		}
 		if (col.tag == "PUSawWaveL") {
-			wave.SawtoothWave (10,true,false);
+			wave.SawtoothWave (powerUpDuration,true,false);
 		}
 		if (col.tag == "PUSawWaveR") {
-			wave.TriangleWave (10,true,false);
+			wave.SawtoothWave (powerUpDuration,false,true);
+		}
+		if (col.tag == "PUTriangleL") {
+			wave.TriangleWave (powerUpDuration,true,false);
+		}
+		if (col.tag == "PUTriangleR") {
+			wave.TriangleWave (powerUpDuration,false,true);
 		}
 
 	}

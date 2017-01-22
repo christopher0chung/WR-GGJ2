@@ -121,11 +121,11 @@ MonoBehaviour:
   hazardDelayMin: 0.5
   hazardDelayMax: 2
   spawnSpeed: 2
-  levelChoice: 3
+  levelChoice: 1
   LevelOne:
-  - {fileID: 1362008871473008, guid: dba8216191efd5c4a91990682d336dcb, type: 2}
-  - {fileID: 1362008871473008, guid: dba8216191efd5c4a91990682d336dcb, type: 2}
-  - {fileID: 1362008871473008, guid: dba8216191efd5c4a91990682d336dcb, type: 2}
+  - {fileID: 1428333799302454, guid: 10fb2dca4a57b49ac9cfb635153abc59, type: 2}
+  - {fileID: 1092287431933618, guid: d2f9ffe41023f4d2e8d72e69ada22ea9, type: 2}
+  - {fileID: 1467536975578586, guid: a209762ecc4e84258a0b20feaadad299, type: 2}
   - {fileID: 1362008871473008, guid: dba8216191efd5c4a91990682d336dcb, type: 2}
   - {fileID: 1395272062534462, guid: 17ac06b5dbdc1ad448792d93d74a182b, type: 2}
   - {fileID: 1428666323677438, guid: efe0d6f896415e2408a1b96f43712d39, type: 2}
