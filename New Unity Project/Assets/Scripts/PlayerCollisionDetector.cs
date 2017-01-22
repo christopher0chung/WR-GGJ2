@@ -9,6 +9,8 @@ public class PlayerCollisionDetector : MonoBehaviour {
     public delegate void PlayerHit();
     public static event PlayerHit onPlayerHit;
 
+	WaveMaker wave;
+
     public void PlayerHitEvent()
     {
         onPlayerHit();
@@ -23,6 +25,7 @@ public class PlayerCollisionDetector : MonoBehaviour {
     }
 
     void Start(){
+		wave = FindObjectOfType<WaveMaker> ();
 		GameObject textControllerObject = GameObject.FindWithTag ("TextController");
 		if (textControllerObject != null) {
 			textController = textControllerObject.GetComponent<TextController>();
@@ -49,6 +52,10 @@ public class PlayerCollisionDetector : MonoBehaviour {
 			Instantiate(Resources.Load("FirewallExplosion"), col.transform.position, Quaternion.identity);
             if (EventRegister.instance.OnPickUp != null) EventRegister.instance.OnPickUp.Invoke();
             Destroy(col.gameObject);
+		}
+
+		if (col.tag == "PUStepWaveL") {
+			wave.SquareWave (10);
 		}
 	}
 
