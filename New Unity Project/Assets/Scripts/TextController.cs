@@ -36,13 +36,13 @@ public class TextController : MonoBehaviour {
 		//if (score < 0) {
 		//	score = 0;
 		//}
-		scoreText.text = "Data Stolen:\n" + score + "%";
+		scoreText.text = "Score: " + score;
         GetComponent<WinScript>().score = score;
 	}
 
 	public void UpdateLevel(int i) {  //updates level text
 		level = i;
-		levelText.text = "Network Layer: " + level;
+		//levelText.text = "Network Layer: " + level;
 	}
 
 	public void GameOver(){ //extra function for game over.
