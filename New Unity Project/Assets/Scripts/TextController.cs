@@ -26,13 +26,18 @@ public class TextController : MonoBehaviour {
 	public void AddScore (int newScoreValue){  //adds new value to score and updates it.
 		score += newScoreValue;
 		UpdateScore ();
+        if (score < 0)
+        {
+            GetComponent<WinScript>().playerDied = true;
+        }
 	}
 
 	void UpdateScore(){  //updates score text.
-		if (score < 0) {
-			score = 0;
-		}
+		//if (score < 0) {
+		//	score = 0;
+		//}
 		scoreText.text = "Data Stolen:\n" + score + "%";
+        GetComponent<WinScript>().score = score;
 	}
 
 	public void UpdateLevel(int i) {  //updates level text

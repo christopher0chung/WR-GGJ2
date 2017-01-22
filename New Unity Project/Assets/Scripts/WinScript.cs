@@ -17,20 +17,23 @@ public class WinScript : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        //	if (timeIsUp == true) {
-        //		if (score > 85) {
-        //			//go to next stage
-        //			//unload previous stage
-        //		} else {
-        //			//go to try again screen
-        //		}
-        //	}
-        //if (playerDied == true) {
-        //		//go to try again screen
+        if (timeIsUp == true)
+        {
+            if (score > 85)
+            {
+                //go to next stage
+                //unload previous stage
+            }
+            else
+            {
+                //go to try again screen
+            }
+        }
+        if (playerDied == true)
+        {
+            //go to try again screen
 
-        //	}
-        //}
-
+        }
     }
 
 }
