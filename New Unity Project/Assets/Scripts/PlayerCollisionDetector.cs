@@ -55,7 +55,16 @@ public class PlayerCollisionDetector : MonoBehaviour {
 		}
 
 		if (col.tag == "PUStepWaveL") {
-			wave.SquareWave (10);
+			wave.SquareWave (10,true,false);
+		}
+		if (col.tag == "PUStepWaveR") {
+			wave.SquareWave (10,true,false);
+		}
+		if (col.tag == "PUSawWaveL") {
+			wave.SawtoothWave (10,true,false);
+		}
+		if (col.tag == "PUSawWaveR") {
+			wave.TriangleWave (10,true,false);
 		}
 
 	}
