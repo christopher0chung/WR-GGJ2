@@ -684,8 +684,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2059780429}
   - component: {fileID: 2059780428}
+  - component: {fileID: 2059780430}
   m_Layer: 0
-  m_Name: TextController
+  m_Name: GameStateManager
   m_TagString: TextController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -718,6 +719,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059780430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2059780427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8e1fde2ac35c406180f40ce89a58c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIsOver: 0
+  timeIsUp: 0
+  playerDied: 0
+  score: 0
 --- !u!1 &2109487672
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,9 +824,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freqBaseLS: 4
-  freqBaseRS: 40
+  freqBaseRS: 25
   freqRngLS: 3
-  freqRngRS: 5
+  freqRngRS: 10
   ampBaseLS: 20
   ampRangeLS: 15
   ampBaseRS: 5
@@ -826,10 +842,10 @@ MonoBehaviour:
   valuesLeft: []
   valuesRight: []
   segmentNum: 200
-  lineWidth: 1
-  mainLineCol: {r: 0, g: 0, b: 0, a: 0}
-  leftLineCol: {r: 0, g: 0, b: 0, a: 0}
-  rightLineCol: {r: 0, g: 0, b: 0, a: 0}
+  lineWidth: 1.5
+  mainLineCol: {r: 1, g: 1, b: 1, a: 1}
+  leftLineCol: {r: 1, g: 1, b: 1, a: 0.78431374}
+  rightLineCol: {r: 1, g: 1, b: 1, a: 0.78431374}
 --- !u!4 &2113609274
 Transform:
   m_ObjectHideFlags: 0
