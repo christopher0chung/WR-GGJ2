@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CMoves : MonoBehaviour {
 	
+
+
 	// Update is called once per frame
 	void FixedUpdate () {
 
@@ -11,5 +13,6 @@ public class CMoves : MonoBehaviour {
         if (newX <= -189)
             newX += 378;
         transform.localPosition = new Vector3(newX, transform.localPosition.y, transform.localPosition.z);
+        transform.Rotate(Vector3.right * .125f);
 	}
 }
