@@ -42,7 +42,7 @@ public class PlayerCollisionDetector : MonoBehaviour {
 		if (col.tag == "Hazard") {
             PlayerHitEvent();
 			print ("Lost Data");
-			textController.AddScore (-10);
+			textController.AddScore (-5);
             Instantiate(Resources.Load("FirewallExplosion"), col.transform.position, Quaternion.identity);
             if (EventRegister.instance.OnHitObstacle != null) EventRegister.instance.OnHitObstacle.Invoke();
             Destroy(col.gameObject);
@@ -50,7 +50,7 @@ public class PlayerCollisionDetector : MonoBehaviour {
 		if (col.tag == "Pickup") {
             PlayerCollectEvent();
 			print ("Gained Data");
-			textController.AddScore (2);
+			textController.AddScore (3);
 			Instantiate(Resources.Load("CollectionExplosion"), col.transform.position, Quaternion.identity);
             if (EventRegister.instance.OnPickUp != null) EventRegister.instance.OnPickUp.Invoke();
             Destroy(col.gameObject);
