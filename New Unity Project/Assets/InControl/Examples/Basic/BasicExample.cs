@@ -13,8 +13,8 @@ namespace BasicExample
         public delegate void runningUpdate();
         public runningUpdate theUpdate;
 
-        private GameObject canvas;
-        private GameObject instructions;
+        public GameObject canvas;
+        public GameObject instructions;
 
         void Awake()
         {
@@ -25,8 +25,6 @@ namespace BasicExample
         void Start ()
         {
             theUpdate = JoinScreen;
-            canvas = GameObject.Find("Canvas");
-            instructions = GameObject.Find("Instructions");
         }
 
 		void Update()
@@ -52,13 +50,13 @@ namespace BasicExample
 
             if (inputDevice.Action1.IsPressed)
             {
-                canvas.SetActive(true);
-                instructions.SetActive(false);
+                canvas.SetActive(false);
+                instructions.SetActive(true);
             }
             else
             {
-                canvas.SetActive(false);
-                instructions.SetActive(true);
+                canvas.SetActive(true);
+                instructions.SetActive(false);
             }
 
 			if (inputDevice.CommandIsPressed)
