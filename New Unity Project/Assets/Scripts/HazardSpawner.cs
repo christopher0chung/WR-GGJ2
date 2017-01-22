@@ -8,14 +8,29 @@ public class HazardSpawner : MonoBehaviour {
 	public float hazardDelayMax;
 	private int index = 0;
 	public float spawnSpeed;
+	public int levelChoice;
 
 	private GameObject[] hazards;
 
 	public GameObject[] LevelOne;
 	public GameObject[] LevelOneB;
+	public GameObject[] LevelOneC;
+	public GameObject[] LevelTwo;
+	public GameObject[] LevelThree;
 
 	void Start() {
-		hazards = LevelOne;
+		if(levelChoice == 1) {
+			hazards = LevelOne;
+		}
+		if(levelChoice == 2) {
+			hazards = LevelOneB;
+		}
+		if(levelChoice == 3) {
+			hazards = LevelOneC;
+		}
+		if(levelChoice == 4) {
+			hazards = LevelTwo;
+		}
 	}
 
 
@@ -33,7 +48,7 @@ public class HazardSpawner : MonoBehaviour {
 				}
 			}
 		} else {  //this else causes blocks to spawn infinitely. Remove once end game state is created.
-			index = 0;
+			//index = 0;
 		}
 	}
 
