@@ -7,6 +7,12 @@ TagManager:
   - Hazard
   - TextController
   - Pickup
+  - PUSawWaveL
+  - PUSawWaveR
+  - PUStepWaveL
+  - PUStepWaveR
+  - PUTriangleL
+  - PUTriangleR
   layers:
   - Default
   - TransparentFX
