@@ -57,6 +57,7 @@ public class PlayerCollisionDetector : MonoBehaviour {
 		if (col.tag == "PUStepWaveL") {
 			wave.SquareWave (10);
 		}
+
 	}
 
 }
