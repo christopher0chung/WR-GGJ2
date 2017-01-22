@@ -19,7 +19,10 @@ public class HazardSpawner : MonoBehaviour {
 	public GameObject[] LevelThree;
 	public GameObject[] LevelInfinite;
 
+	public bool levelOver;
+
 	void Start() {
+		levelOver = false;
 		if(levelChoice == 1) {
 			hazards = LevelOne;
 		}
@@ -44,14 +47,18 @@ public class HazardSpawner : MonoBehaviour {
 			if (hazards [index] == null) {
 				Debug.Log ("No Hazard Found.");
 				//break;
-			} else {
+			} 
+			else {
 
 				while (IsInvoking ("SpawnHazard") == false) {
 					Invoke ("SpawnHazard", Random.Range (hazardDelayMin, hazardDelayMax));
 					index++;
 				}
 			}
-		} else {  //this else causes blocks to spawn infinitely. Remove once end game state is created.
+		} 
+		else {  //this else causes blocks to spawn infinitely. Remove once end game state is created.
+
+			levelOver = true;
 			//index = 0;
 		}
 	}
