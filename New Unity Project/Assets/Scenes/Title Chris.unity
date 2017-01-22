@@ -156,7 +156,7 @@ Canvas:
   serializedVersion: 2
   m_RenderMode: 1
   m_Camera: {fileID: 1928013454}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 10
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -653,6 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ring: {fileID: 1480145308946154, guid: 0c261798cc87c9b4799b95a016adca73, type: 2}
+  ringMat: {fileID: 2100000, guid: 7dde76149e9ec264f96be05f86e7c5d1, type: 2}
 --- !u!4 &1590697266
 Transform:
   m_ObjectHideFlags: 0
@@ -762,15 +763,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f23ed1942c5d9474c8ccae9d049e8a51, type: 3}
       propertyPath: m_LocalScale.x
-      value: 500
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f23ed1942c5d9474c8ccae9d049e8a51, type: 3}
       propertyPath: m_LocalScale.y
-      value: 500
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f23ed1942c5d9474c8ccae9d049e8a51, type: 3}
       propertyPath: m_LocalScale.z
-      value: 500
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f23ed1942c5d9474c8ccae9d049e8a51, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

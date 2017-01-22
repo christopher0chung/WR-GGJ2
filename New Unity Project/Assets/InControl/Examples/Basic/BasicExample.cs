@@ -8,6 +8,7 @@ namespace BasicExample
 	{
         public int mySceneNum;
         public WaveMaker myWM;
+		public GameObject souMan;
 
         void Awake()
         {
@@ -45,9 +46,15 @@ namespace BasicExample
 
 			if (inputDevice.CommandIsPressed || Input.anyKeyDown)
             {
-                SceneManager.LoadScene(4);
+				this.GetComponent<AudioSource> ().Play ();
+				souMan.GetComponent<AudioSource> ().Stop ();
+				Invoke("StartGame", 2.0f);
             }
         }
+
+		void StartGame() {
+			SceneManager.LoadScene (4);
+		}
 
         void GameScreen()
         {
