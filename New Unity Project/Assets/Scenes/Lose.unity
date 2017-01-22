@@ -403,7 +403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1502454963
 AudioListener:
   m_ObjectHideFlags: 0
@@ -434,7 +434,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.07388235, g: 0.785, b: 0.5418039, a: 1}
+  m_BackGroundColor: {r: 1, g: 0.37254903, b: 0.34509805, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
