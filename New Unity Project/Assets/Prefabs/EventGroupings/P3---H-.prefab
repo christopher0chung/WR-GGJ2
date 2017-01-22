@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4256791347846394}
+  - component: {fileID: 114016571137422348}
   m_Layer: 0
   m_Name: P3---H-
   m_TagString: Untagged
@@ -37,7 +38,6 @@ GameObject:
   - component: {fileID: 33735595797569704}
   - component: {fileID: 65244542628385164}
   - component: {fileID: 23934332700660616}
-  - component: {fileID: 114372940037090876}
   - component: {fileID: 54237012304494218}
   m_Layer: 0
   m_Name: Pickup (2)
@@ -74,7 +74,6 @@ GameObject:
   - component: {fileID: 33321874543679268}
   - component: {fileID: 65693462161101812}
   - component: {fileID: 23193458636914770}
-  - component: {fileID: 114848284325947378}
   - component: {fileID: 54530133692721486}
   m_Layer: 0
   m_Name: Temp Hazard
@@ -94,7 +93,6 @@ GameObject:
   - component: {fileID: 33939229630331370}
   - component: {fileID: 65152716941258632}
   - component: {fileID: 23014791927609134}
-  - component: {fileID: 114533828739226962}
   - component: {fileID: 54401269983270702}
   m_Layer: 0
   m_Name: Pickup
@@ -114,7 +112,6 @@ GameObject:
   - component: {fileID: 33949219961401422}
   - component: {fileID: 65894952508694410}
   - component: {fileID: 23334895626757794}
-  - component: {fileID: 114477700573190486}
   - component: {fileID: 54718926241429644}
   m_Layer: 0
   m_Name: Pickup (1)
@@ -172,7 +169,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1454915443175958}
-  m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.1464466, w: 0.8535535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -15, z: 0}
   m_LocalScale: {x: 5, y: 15, z: 5}
   m_Children:
@@ -466,54 +463,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114372940037090876
+--- !u!114 &114016571137422348
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1181502071956290}
+  m_GameObject: {fileID: 1078403784798822}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
---- !u!114 &114477700573190486
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1937720095437936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
---- !u!114 &114533828739226962
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1900978329557894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
---- !u!114 &114848284325947378
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1454915443175958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
 --- !u!198 &198012135520708266
 ParticleSystem:
   m_ObjectHideFlags: 1

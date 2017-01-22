@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33240054994736542}
   - component: {fileID: 65008473844578604}
   - component: {fileID: 23736873045372522}
-  - component: {fileID: 114808393033031982}
   - component: {fileID: 54505309648394812}
   m_Layer: 0
   m_Name: Pickup
@@ -42,7 +41,6 @@ GameObject:
   - component: {fileID: 33649373903402064}
   - component: {fileID: 65544703221051876}
   - component: {fileID: 23076815782770666}
-  - component: {fileID: 114794613132181124}
   - component: {fileID: 54989496727907480}
   m_Layer: 0
   m_Name: Temp Hazard
@@ -76,6 +74,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4500215388746996}
+  - component: {fileID: 114999000174830800}
   m_Layer: 0
   m_Name: --H-P
   m_TagString: Untagged
@@ -130,7 +129,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1485836490534576}
-  m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.1464466, w: 0.8535535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 15, z: 5}
   m_Children:
@@ -268,24 +267,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114794613132181124
+--- !u!114 &114999000174830800
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1485836490534576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
---- !u!114 &114808393033031982
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1069595960153890}
+  m_GameObject: {fileID: 1844925484802840}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}

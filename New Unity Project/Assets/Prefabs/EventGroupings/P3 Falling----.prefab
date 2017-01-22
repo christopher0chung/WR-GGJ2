@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33883050383342410}
   - component: {fileID: 65860626744316282}
   - component: {fileID: 23683185800508048}
-  - component: {fileID: 114699628317049972}
   - component: {fileID: 54227874962005472}
   m_Layer: 0
   m_Name: Pickup (2)
@@ -42,7 +41,6 @@ GameObject:
   - component: {fileID: 33500852768483240}
   - component: {fileID: 65608669485075672}
   - component: {fileID: 23797219446355658}
-  - component: {fileID: 114893775530959752}
   - component: {fileID: 54516482312068098}
   m_Layer: 0
   m_Name: Pickup (1)
@@ -59,6 +57,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4777807712836544}
+  - component: {fileID: 114267015230682804}
   m_Layer: 0
   m_Name: P3 Falling----
   m_TagString: Untagged
@@ -77,7 +76,6 @@ GameObject:
   - component: {fileID: 33427119299597710}
   - component: {fileID: 65518272633679646}
   - component: {fileID: 23223185739729062}
-  - component: {fileID: 114885836366666766}
   - component: {fileID: 54985133334260052}
   m_Layer: 0
   m_Name: Pickup
@@ -336,39 +334,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114699628317049972
+--- !u!114 &114267015230682804
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1573039697292250}
+  m_GameObject: {fileID: 1811305548183492}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
---- !u!114 &114885836366666766
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1969078625033636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
---- !u!114 &114893775530959752
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1573741719872150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1
