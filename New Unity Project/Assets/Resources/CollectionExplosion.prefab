@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114001186806413928}
   - component: {fileID: 82954292533272422}
   m_Layer: 0
-  m_Name: FirewallExplosion
+  m_Name: CollectionExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e880c46f17e854876b3822124b6ba0eb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cd6cdaf67308c4dd9996acba934d94f3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
