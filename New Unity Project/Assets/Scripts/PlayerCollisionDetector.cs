@@ -51,7 +51,7 @@ public class PlayerCollisionDetector : MonoBehaviour {
             PlayerCollectEvent();
 			print ("Gained Data");
 			textController.AddScore (2);
-			Instantiate(Resources.Load("FirewallExplosion"), col.transform.position, Quaternion.identity);
+			Instantiate(Resources.Load("PickupExplosion"), col.transform.position, Quaternion.identity);
             if (EventRegister.instance.OnPickUp != null) EventRegister.instance.OnPickUp.Invoke();
             Destroy(col.gameObject);
 		}
