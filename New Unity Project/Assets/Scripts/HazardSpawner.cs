@@ -17,6 +17,7 @@ public class HazardSpawner : MonoBehaviour {
 	public GameObject[] LevelOneC;
 	public GameObject[] LevelTwo;
 	public GameObject[] LevelThree;
+	public GameObject[] LevelInfinite;
 
 	void Start() {
 		if(levelChoice == 1) {
@@ -30,6 +31,9 @@ public class HazardSpawner : MonoBehaviour {
 		}
 		if(levelChoice == 4) {
 			hazards = LevelTwo;
+		}
+		if (levelChoice == 99) {
+			hazards = LevelInfinite;
 		}
 	}
 
