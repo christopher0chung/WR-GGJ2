@@ -112,7 +112,7 @@ public class WaveMaker : MonoBehaviour {
         graphicLeft.color = leftLineCol;
         graphicRight.color = rightLineCol;
 
-        graphicMain.Draw();
+        //graphicMain.Draw();
         graphicLeft.Draw();
         graphicRight.Draw();
     }
