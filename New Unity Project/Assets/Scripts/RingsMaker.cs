@@ -49,7 +49,7 @@ public class RingsMaker : MonoBehaviour {
     {
         foreach (GameObject aRing in rings)
         {
-            aRing.transform.localScale = Vector3.one * 150;
+            aRing.transform.localScale = Vector3.one * 210;
         }
         ringMat.color = Color.white;
     }
