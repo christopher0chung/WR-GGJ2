@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
 --- !u!114 &114477700573190486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
 --- !u!114 &114533828739226962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
 --- !u!114 &114848284325947378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d89c46454e7004792e0cdd7382f71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
 --- !u!198 &198012135520708266
 ParticleSystem:
   m_ObjectHideFlags: 1
