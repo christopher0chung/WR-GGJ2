@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Vectrosity;
@@ -38,6 +38,10 @@ public class WaveMaker : MonoBehaviour {
     public Vector3[] valuesRight;
     public int segmentNum;
     public float lineWidth;
+
+    public Color mainLineCol;
+    public Color leftLineCol;
+    public Color rightLineCol;
 
     // Use this for initialization
     void Start () {
@@ -104,6 +108,9 @@ public class WaveMaker : MonoBehaviour {
         graphicMain.MakeSpline(valuesMain);
         graphicLeft.MakeSpline(valuesLeft);
         graphicRight.MakeSpline(valuesRight);
+        graphicMain.color = mainLineCol;
+        graphicLeft.color = leftLineCol;
+        graphicRight.color = rightLineCol;
 
         graphicMain.Draw();
         graphicLeft.Draw();

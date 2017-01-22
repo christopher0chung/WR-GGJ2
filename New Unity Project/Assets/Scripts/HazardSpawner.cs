@@ -11,6 +11,7 @@ public class HazardSpawner : MonoBehaviour {
 	private GameObject[] hazards;
 
 	public GameObject[] LevelOne;
+	public GameObject[] LevelOneB;
 
 	void Start() {
 		hazards = LevelOne;
