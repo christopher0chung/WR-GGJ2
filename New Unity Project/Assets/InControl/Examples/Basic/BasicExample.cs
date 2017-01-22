@@ -8,6 +8,10 @@ namespace BasicExample
 	{
         public int mySceneNum;
         public WaveMaker myWM;
+		public GameObject souMan;
+
+        public delegate void runningUpdate();
+        public runningUpdate theUpdate;
 
         void Awake()
         {
@@ -15,16 +19,14 @@ namespace BasicExample
             DontDestroyOnLoad(this.gameObject);
         }
 
+        void Start ()
+        {
+            theUpdate = JoinScreen;
+        }
+
 		void Update()
 		{
-            if (mySceneNum < 4 )
-            {
-                JoinScreen();
-            }
-            else
-            {
-                GameScreen();
-            }
+            theUpdate();
 		}
 
         void JoinScreen()
@@ -43,11 +45,22 @@ namespace BasicExample
             // Blend the two colors together to color the object.
             GetComponent<Renderer>().material.color = Color.Lerp(color1, color2, 0.5f);
 
-            if (inputDevice.CommandIsPressed)
+			if (inputDevice.CommandIsPressed || Input.anyKeyDown)
             {
-                SceneManager.LoadScene(4);
+                theUpdate = GameScreen;
+				this.GetComponent<AudioSource> ().Play ();
+				souMan.GetComponent<AudioSource> ().Stop ();
+                if (GameObject.Find("RingMaker") != null)
+                {
+                    GameObject.Find("RingMaker").GetComponent<RingsMaker>().unSubscribe();
+                }
+				Invoke("StartGame", 2.0f);
             }
         }
+
+		void StartGame() {
+			SceneManager.LoadScene (4);
+		}
 
         void GameScreen()
         {
