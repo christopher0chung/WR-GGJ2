@@ -845,7 +845,7 @@ MonoBehaviour:
   mainLineCol: {r: 0.04411763, g: 1, b: 0.1693713, a: 1}
   leftLineCol: {r: 0.9882353, g: 0.27058825, b: 1, a: 1}
   rightLineCol: {r: 0.4, g: 0.2509804, b: 1, a: 1}
-  pointNum: 200
+  pointNum: 100
 --- !u!4 &707580088
 Transform:
   m_ObjectHideFlags: 0
