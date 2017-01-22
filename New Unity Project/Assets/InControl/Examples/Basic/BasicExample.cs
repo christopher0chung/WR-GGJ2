@@ -13,6 +13,9 @@ namespace BasicExample
         public delegate void runningUpdate();
         public runningUpdate theUpdate;
 
+        private GameObject canvas;
+        private GameObject instructions;
+
         void Awake()
         {
             SceneManager.sceneLoaded += NewScene;
@@ -22,6 +25,8 @@ namespace BasicExample
         void Start ()
         {
             theUpdate = JoinScreen;
+            canvas = GameObject.Find("Canvas");
+            instructions = GameObject.Find("Instructions");
         }
 
 		void Update()
@@ -34,16 +39,27 @@ namespace BasicExample
             // Use last device which provided input.
             var inputDevice = InputManager.ActiveDevice;
 
-            // Rotate target object with left stick.
-            transform.Rotate(Vector3.down, 500.0f * Time.deltaTime * inputDevice.LeftStickX, Space.World);
-            transform.Rotate(Vector3.right, 500.0f * Time.deltaTime * inputDevice.LeftStickY, Space.World);
+            //// Rotate target object with left stick.
+            //transform.Rotate(Vector3.down, 500.0f * Time.deltaTime * inputDevice.LeftStickX, Space.World);
+            //transform.Rotate(Vector3.right, 500.0f * Time.deltaTime * inputDevice.LeftStickY, Space.World);
 
-            // Get two colors based on two action buttons.
-            var color1 = inputDevice.Action1.IsPressed ? Color.red : Color.white;
-            var color2 = inputDevice.Action2.IsPressed ? Color.green : Color.white;
+            //// Get two colors based on two action buttons.
+            //var color1 = inputDevice.Action1.IsPressed ? Color.red : Color.white;
+            //var color2 = inputDevice.Action2.IsPressed ? Color.green : Color.white;
 
-            // Blend the two colors together to color the object.
-            GetComponent<Renderer>().material.color = Color.Lerp(color1, color2, 0.5f);
+            //// Blend the two colors together to color the object.
+            //GetComponent<Renderer>().material.color = Color.Lerp(color1, color2, 0.5f);
+
+            if (inputDevice.Action1.IsPressed)
+            {
+                canvas.SetActive(true);
+                instructions.SetActive(false);
+            }
+            else
+            {
+                canvas.SetActive(false);
+                instructions.SetActive(true);
+            }
 
 			if (inputDevice.CommandIsPressed)
             {

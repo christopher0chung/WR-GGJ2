@@ -213,7 +213,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1289657718
+  randomSeed: 1950095042
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3400,7 +3400,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Press "A" for Instructions
+  m_Text: 'Hold "A" for Instructions
 
     Press "Start" to Play'
 --- !u!222 &1221334005
