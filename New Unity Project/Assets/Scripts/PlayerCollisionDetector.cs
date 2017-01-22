@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,13 +22,15 @@ public class PlayerCollisionDetector : MonoBehaviour {
 			print ("Lost Data");
 			textController.AddScore (-10);
             Instantiate(Resources.Load("FirewallExplosion"), col.transform.position, Quaternion.identity);
+            if (EventRegister.instance.OnHitObstacle != null) EventRegister.instance.OnHitObstacle.Invoke();
             Destroy(col.gameObject);
 		}
 		if (col.tag == "Pickup") {
 			print ("Gained Data");
 			textController.AddScore (2);
 			Instantiate(Resources.Load("FirewallExplosion"), col.transform.position, Quaternion.identity);
-			Destroy (col.gameObject);
+            if (EventRegister.instance.OnPickUp != null) EventRegister.instance.OnPickUp.Invoke();
+            Destroy(col.gameObject);
 		}
 	}
 
