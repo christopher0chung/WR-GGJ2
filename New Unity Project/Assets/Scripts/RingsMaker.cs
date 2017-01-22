@@ -51,7 +51,7 @@ public class RingsMaker : MonoBehaviour {
         {
             aRing.transform.localScale = Vector3.one * 210;
         }
-        ringMat.color = Color.white;
+        ringMat.color = new Color(.074f, .781f, .539f);
     }
 
     public void unSubscribe()
