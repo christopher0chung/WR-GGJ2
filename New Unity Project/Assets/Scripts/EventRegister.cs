@@ -17,7 +17,11 @@ public class EventRegister : MonoBehaviour {
     public NormalEventHandler OnHitObstacle;
 
 
+    void Start() {
+        PlayerCollisionDetector.onPlayerCollect += FishEyeInOut;
+    }
     public void FishEyeInOut() {
+
         DOTween.To(() => Camera.main.GetComponent<Fisheye>().strengthX, (x) => Camera.main.GetComponent<Fisheye>().strengthX = x, 0.5f, 0.5f).SetDelay(0);
         DOTween.To(() => Camera.main.GetComponent<Fisheye>().strengthY, (x) => Camera.main.GetComponent<Fisheye>().strengthY = x, 0.5f, 0.5f).SetDelay(0);
         DOTween.To(() => Camera.main.GetComponent<Fisheye>().strengthX, (x) => Camera.main.GetComponent<Fisheye>().strengthX = x, 0, 0.5f).SetDelay(0.5f);

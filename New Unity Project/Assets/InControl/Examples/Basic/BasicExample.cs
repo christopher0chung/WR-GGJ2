@@ -12,7 +12,7 @@ namespace BasicExample
 
         public delegate void runningUpdate();
         public runningUpdate theUpdate;
-
+        
         void Awake()
         {
             SceneManager.sceneLoaded += NewScene;
@@ -27,7 +27,13 @@ namespace BasicExample
 		void Update()
 		{
             theUpdate();
-		}
+            if (Input.GetKeyDown(KeyCode.X)) {
+                LevelLoader.instance.Win();
+            }
+            if (Input.GetKeyDown(KeyCode.Z)) {
+                StartGame();
+            }
+        }
 
         void JoinScreen()
         {
