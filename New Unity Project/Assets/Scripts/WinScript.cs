@@ -7,6 +7,7 @@ public class WinScript : MonoBehaviour {
 	public bool sceneIsOver = false;
 	public bool timeIsUp = false;
 	public bool playerDied = false;
+	public int score = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -32,4 +33,4 @@ public class WinScript : MonoBehaviour {
 
 	}
 		
-}
+
