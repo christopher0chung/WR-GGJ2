@@ -35,6 +35,9 @@ public class HazardSpawner : MonoBehaviour {
 		if(levelChoice == 4) {
 			hazards = LevelTwo;
 		}
+		if(levelChoice == 5) {
+			hazards = LevelThree;
+		}
 		if (levelChoice == 99) {
 			hazards = LevelInfinite;
 		}
@@ -59,6 +62,7 @@ public class HazardSpawner : MonoBehaviour {
 		else {  //this else causes blocks to spawn infinitely. Remove once end game state is created.
 
 			levelOver = true;
+			Debug.Log ("im leveling over");
 			//index = 0;
 		}
 	}
