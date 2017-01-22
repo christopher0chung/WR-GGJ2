@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4769585406432206}
   m_Layer: 0
-  m_Name: pickup-hazard
+  m_Name: P-H--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

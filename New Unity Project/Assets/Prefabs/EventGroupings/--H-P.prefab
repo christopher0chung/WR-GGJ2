@@ -60,7 +60,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4500215388746996}
   m_Layer: 0
-  m_Name: hazard-pickup
+  m_Name: --H-P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
