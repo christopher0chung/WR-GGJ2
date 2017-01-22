@@ -12,7 +12,10 @@ namespace BasicExample
 
         public delegate void runningUpdate();
         public runningUpdate theUpdate;
-        
+
+        public GameObject canvas;
+        public GameObject instructions;
+
         void Awake()
         {
             SceneManager.sceneLoaded += NewScene;
@@ -27,29 +30,34 @@ namespace BasicExample
 		void Update()
 		{
             theUpdate();
-            if (Input.GetKeyDown(KeyCode.X)) {
-                LevelLoader.instance.Win();
-            }
-            if (Input.GetKeyDown(KeyCode.Z)) {
-                StartGame();
-            }
-        }
+		}
 
         void JoinScreen()
         {
             // Use last device which provided input.
             var inputDevice = InputManager.ActiveDevice;
 
-            // Rotate target object with left stick.
-            transform.Rotate(Vector3.down, 500.0f * Time.deltaTime * inputDevice.LeftStickX, Space.World);
-            transform.Rotate(Vector3.right, 500.0f * Time.deltaTime * inputDevice.LeftStickY, Space.World);
+            //// Rotate target object with left stick.
+            //transform.Rotate(Vector3.down, 500.0f * Time.deltaTime * inputDevice.LeftStickX, Space.World);
+            //transform.Rotate(Vector3.right, 500.0f * Time.deltaTime * inputDevice.LeftStickY, Space.World);
 
-            // Get two colors based on two action buttons.
-            var color1 = inputDevice.Action1.IsPressed ? Color.red : Color.white;
-            var color2 = inputDevice.Action2.IsPressed ? Color.green : Color.white;
+            //// Get two colors based on two action buttons.
+            //var color1 = inputDevice.Action1.IsPressed ? Color.red : Color.white;
+            //var color2 = inputDevice.Action2.IsPressed ? Color.green : Color.white;
 
-            // Blend the two colors together to color the object.
-            GetComponent<Renderer>().material.color = Color.Lerp(color1, color2, 0.5f);
+            //// Blend the two colors together to color the object.
+            //GetComponent<Renderer>().material.color = Color.Lerp(color1, color2, 0.5f);
+
+            if (inputDevice.Action1.IsPressed)
+            {
+                canvas.SetActive(false);
+                instructions.SetActive(true);
+            }
+            else
+            {
+                canvas.SetActive(true);
+                instructions.SetActive(false);
+            }
 
 			if (inputDevice.CommandIsPressed)
             {
