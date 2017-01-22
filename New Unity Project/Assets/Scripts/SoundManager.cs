@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour {
 
-	public int mySceneNum;
+	private int mySceneNum;
 
 	public GameObject musicChild;
 	public GameObject sfxChild;
@@ -23,9 +23,10 @@ public class SoundManager : MonoBehaviour {
 
 
 	//SFX TRACKS
-	public AudioClip mainTheme;
-	public AudioClip titleTheme;
-	public AudioClip deadTheme;
+	public AudioClip coinGrab;
+	public AudioClip collisionOne;
+	public AudioClip collisionTwo;
+	
 
 	void Awake() {
 		SceneManager.sceneLoaded += NewScene;
