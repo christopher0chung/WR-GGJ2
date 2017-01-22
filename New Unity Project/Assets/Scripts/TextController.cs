@@ -35,7 +35,8 @@ public class TextController : MonoBehaviour {
 		scoreText.text = "Data Stolen:\n" + score + "%";
 	}
 
-	public void UpdateLevel(int level) {  //updates level text
+	public void UpdateLevel(int i) {  //updates level text
+		level = i;
 		levelText.text = "Network Layer: " + level;
 	}
 
